@@ -1,0 +1,5 @@
+Created by damanar on 9/10/11.
+
+characterHUD is an attempt at bringing character sheets for rpgs to a digital, web based, mobile friendly format.  It will use node.js and mongodb as it's backend.
+
+characterHUD will not cater to the lowest common denominator, i.e. ie, and will strive to look and feel elegant.
