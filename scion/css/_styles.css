@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+}
+
+p {
+  margin: .2em;
+}
+
+.header {
+  font-size: 2em;
+  color: #dddddd;
+  font-weight: bold;
+}
+
+.content {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  font-size: 1.3em;
+  color: #999999;
+  padding: 5px;
+  max-width: 20em;
+}
+
+/* Portrait */
+@media screen and (max-width: 320px)
+{
+}
+ 
+/* Landscape */
+@media screen and (min-width: 321px)
+{
+}
+
+#target_number {
+  line-height: 1.5em;
+}
+
+#target_number {
+
+}
+
+#dice_number{
+}
+
+#results {
+  border: 1px solid #009900;
+  background-color: #ffffff;
+  width: 3em;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 5px auto;
+}

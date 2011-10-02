@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Starblazer Character</title>
+
+<style type="text/css">
+  @import url('_styles.css');
+</style>
+<script type="text/javascript" src="../js/jquery.js">/* comment */</script>
+<script type="text/javascript" src="starblazer.js">/* comment */</script>
+
+<script type="text/javascript">
+  var settings_url = "tarantil.json";
+  var c;
+  $.ajax({
+    async: true,
+    dataType: 'json',
+    url: settings_url,
+    success: function(json){
+      c = json;
+      c.character.error = "success";
+      $('h2[name="name"]').append(c.character.name);
+
+      pop_aspects(c.character.aspects);
+      pop_skills(c.character.skills);
+      pop_stunts(c.character.stunts);
+      pop_stuff(c.character.stuff);
+    },
+    error: function(err){
+      c = {"character": { "error": err }};
+    }
+  });
+</script>
+
+</head>
+<body>
+<h2 name="name"><!-- character name --></h2>
+
+<h3>Aspects:</h3>
+
+<div name="aspects"><!-- aspects --></div>
+
+<h3>Skills:</h3>
+<div class="skills">
+  <ul class="hidden" name="skills8">
+    <li>Rank 8</li>
+  </ul>
+  <ul class="hidden" name="skills7">
+    <li>Rank 7</li>
+  </ul>
+  <ul class="hidden" name="skills6">
+    <li>Rank 6</li>
+  </ul>
+  <ul class="hidden" name="skills5">
+    <li>Rank 5</li>
+  </ul>
+  <ul class="hidden" name="skills4">
+    <li>Rank 4</li>
+  </ul>
+  <ul class="hidden" name="skills3">
+    <li>Rank 3</li>
+  </ul>
+  <ul class="hidden" name="skills2">
+    <li>Rank 2</li>
+  </ul>
+  <ul class="hidden" name="skills1">
+    <li>Rank 1</li>
+  </ul>
+</div>
+<br />
+<div class="clear"><!-- clear --></div>
+
+<h3>Stunts:</h3>
+<div name="stunts"><!-- stunts --></div>
+
+<h3>Stuff:</h3>
+<div name="stuff"><!-- stuff --></div>
+
+</body>
+</html>

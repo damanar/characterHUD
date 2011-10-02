@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Welcome to Character HUD - the Modular RPG Character Heads Up Display</title>
+		<script type="text/javascript" src="js/jquery.js">/* for ie*/</script>
+		<script type="text/javascript" src="js/jquery.hoverIntent.js">/* for ie*/</script>
+		<link type="text/css" rel="stylesheet" href="css/_styles.css" />
+<!--script type="text/javascript">
+		 function getData() {
+				var server_request = "char_data/malcolm_taylor.php?userId=bcard&callback=showData";
+
+				//Check for the existing script node
+				var oScript = document.getElementById("dynamic_script_injection_node");	
+
+				// Get the script tag, if it exists
+				var head = document.getElementsByTagName("head").item(0);
+				// Remove the tag, if it exists to avoid the increase in size
+				if (oScript) {
+					head.removeChild(oScript);
+				}
+
+				script = document.createElement("script");
+				script.setAttribute("id", "dynamic_script_injection_node");
+				script.setAttribute("type", "text/javascript");
+				script.setAttribute("src", server_request);
+				// all set, add the script
+				head.appendChild(script);
+			}
+
+</script-->
+		<script type="text/javascript" src="js/_script.js">/* for ie*/</script>
+		<script type="text/javascript" src="char_data/malcolm_taylor.js">/* for ie*/</script>
+		<script type="text/javascript" src="js/functions_ao.js">/* for ie*/</script>
+	</head>
+	<body>
+			<div id="exp" class="exp">
+				<p>Total CDP: 1700</p>
+				<p>Remaining: 0</p>
+			</div>
+      <div class="top_menu">
+        <div id="hp" class="dynamic_values"> 48 </div>
+        <div id="end" class="dynamic_values"> 74 </div>
+        <div id="trust" class="dynamic_values"> 0 </div>
+      </div>
+		<div class="content">
+			<div class="header">
+				<h1><script type="text/javascript">document.write(c.name);</script> - AlphaOmega - damanar</h1>
+			</div>
+      <div class="stats">
+        <div class="stats_inner" id="core_qualities">
+          <ul>
+						<script type="text/javascript">
+							document.write('<li id="strength" class="roller" value="'+c.strength+'">Strength: '+c.strength+'</li>');
+							document.write('<li id="agility" class="roller" value="'+c.agility+'">Agility: '+c.agility+'</li>');
+							document.write('<li id="conditioning" class="roller" value="'+c.conditioning+'">Conditioning: '+c.conditioning+'</li>');
+							document.write('<li id="vitality" class="roller" value="'+c.vitality+'">Vitality: '+c.vitality+'</li>');
+							document.write('<li id="discipline" class="roller" value="'+c.discipline+'">Discipline: '+c.discipline+'</li>');
+							document.write('<li id="intelligence" class="roller" value="'+c.intelligence+'">Intelligence: '+c.intelligence+'</li>');
+							document.write('<li id="charisma" class="roller" value="'+c.charisma+'">Charisma: '+c.charisma+'</li>');
+						</script>
+          </ul>
+        </div>
+        <div class="stats_inner" id="secondary_qualities">
+          <ul>
+          <script type="text/javascript">
+            document.write('<li id="athleticism" class="roller" value="'+c.athleticism+'">Athleticism: '+c.athleticism+'</li>');
+            document.write('<li id="physical_acumen" class="roller" value="'+c.physical_acumen+'">Physical Acumen '+c.physical_acumen+'</li>');
+            document.write('<li id="fitness" class="roller" value="'+c.fitness+'">Fitness:: '+c.fitness+'</li>');
+            document.write('<li id="will" class="roller" value="'+c.will+'">Will: '+c.will+'</li>');
+            document.write('<li id="wisdom" class="roller" value="'+c.wisdom+'">Wisdom: '+c.wisdom+'</li>');
+            document.write('<li id="wit" class="roller" value="'+c.wit+'">Wit: '+c.wit+'</li>');
+            document.write('<li id="presence" class="roller" value="'+c.presence+'">Presence: '+c.presence+'</li>');
+          </script>
+          </ul>
+        </div>
+        <div class="stats_inner" id="tertiary_qualities">
+          <ul>
+          <script type="text/javascript">
+            document.write('<li id="reaction" class="roller" value="'+c.reaction+'">Reaction: '+c.reaction+'</li>');
+            document.write('<li id="physis" value="'+c.physis+'">Physis: '+c.physis+'</li>');
+            document.write('<li id="defense_rating" value="'+c.defense_rating+'">Defense Rating: '+c.defense_rating+'</li>');
+          </script>
+          </ul>
+        </div>
+        <div class="stats_inner" id="movement">
+          <ul>
+          <li id="swim">Swim: 2</li>
+          <li id="crawl">Crawl: 2</li>
+          <li id="monkey_run">Monkey Run: 4</li>
+          <li id="walk">Walk: 4</li>
+          <li id="run">Run: 6</li>
+          <li id="sprint">Sprint: 10</li>
+          <li id="fly">Fly: -</li>
+        </div>
+      </div>
+      <br style="clear: both;" />
+			<div class="skills">
+			<div id="mental" class="skills_inner">
+				<ul>
+          <li id="military_theory" value="0"><strong>Military Theory</strong>: 0
+					<ul>
+						<li class="roller" quality="wisdom" value="0">Tactics: 0</li>
+						<li class="roller" quality="presence" value="0">Leadership: 0</li>
+					</ul>
+					</li>
+          <li id="science" value="0"><strong>Science</strong>: 0
+					<ul>
+						<li class="roller" quality="wisdom" value="0">Biology: 0</li>
+						<li class="roller" quality="wisdom" value="0">Chemistry: 0</li>
+						<li class="roller" quality="wisdom" value="0">Genetics: 0</li>
+						<li class="roller" quality="wisdom" value="1">Medicine: 1</li>
+						<li class="roller" quality="wisdom" value="0">Arcane: 0</li>
+					</ul>
+					</li>
+          <li id="arts" value="0"><strong>Arts</strong>: 0
+					<ul>
+						<li class="roller" quality="wisdom" value="0">History: 0</li>
+						<li class="roller" quality="wisdom" value="0">Sociology: 0</li>
+						<li class="roller" quality="wisdom" value="1">Theology: 1</li>
+						<li class="roller" quality="wisdom" value="0">Law: 0</li>
+					</ul>
+					</li>
+          <li id="survival" value="0"><strong>Survival</strong>: 0
+					<ul>
+						<li class="roller" quality="wisdom" value="0">Orienteering: 0</li>
+						<li class="roller" quality="presence" value="0">Animal Handeling: 0</li>
+						<li class="roller" quality="will" value="0">Living off the Land: 0</li>
+						<li class="roller" quality="wisdom" value="0">Tracking: 0</li>
+					</ul>
+					</li>
+          <li id="commerce" value="0"><strong>Commerce</strong>: 0
+					<ul>
+						<li class="roller" quality="presence" value="0">Barter: 0</li>
+						<li class="roller" quality="wisdom" value="0">Production: 0</li>
+						<li class="roller" quality="wisdom" value="0">Business Administration: 0</li>
+						<li class="roller" quality="wit" value="0">Networking: 0</li>
+					</ul>
+					</li>
+          <li id="alertness" value="0"><strong>Alertness</strong>: 0
+					<ul>
+						<li class="roller" quality="wit" value="0">Sense Action: 0</li>
+						<li class="roller" quality="wit" value="0">Read People: 0</li>
+						<li class="roller" quality="wit" value="0">Concentration: 0</li>
+						<li class="roller" quality="wit" value="1">Detection: 1</li>
+					</ul>
+					</li>
+          <li id="technology" value="1"><strong>Technology</strong>: 1
+					<ul>
+						<li class="roller" quality="wisdom" value="1">Electronics: 1</li>
+						<li class="roller" quality="wisdom" value="2">Mechanical Technologies: 2</li>
+						<li class="roller" quality="wisdom" value="0">Structural Technologies: 0</li>
+						<li class="roller" quality="wisdom" value="0">Computer Technologies: 0</li>
+					</ul>
+					</li>
+          <li id="fine_arts" value="0"><strong>Fine Arts</strong>: 0
+					<ul>
+						<li class="roller" quality="wisdom" value="0">Visual Arts: 0</li>
+						<li class="roller" quality="wit" value="0">Writing: 0</li>
+						<li class="roller" quality="wisdom" value="0">Culinary Arts: 0</li>
+						<li class="roller" quality="wit" value="0">Performing: 0</li>
+					</ul>
+					</li>
+          <li id="coercion" value="0"><strong>Coercion</strong>: 0
+					<ul>
+						<li class="roller" quality="wit" value="0">Bluff: 0</li>
+						<li class="roller" quality="presence" value="0">Intimidation: 0</li>
+						<li class="roller" quality="wisdom" value="1">Negotiation: 1</li>
+						<li class="roller" quality="presence" value="0">Manipulation: 0</li>
+					</ul>
+					</li>
+          <li id="nefarious" value="0"><strong>Nefarious</strong>: 0
+					<ul>
+						<li class="roller" quality="wit" value="0">Gather Information: 0</li>
+						<li class="roller" quality="wit" value="0">Gamble: 0</li>
+						<li class="roller" quality="will" value="0">Slieght of Hand: 0</li>
+						<li class="roller" quality="wisdom" value="0">Appraise: 0</li>
+						<li class="roller" quality="wisdom" value="0">Street Smarts: 0</li>
+					</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="physical" class="skills_inner">
+				<ul>
+          <li id="melee_combat" value="0"><strong>Melee Combat</strong>: 0
+					<ul>
+						<li class="roller" quality="athleticism" value="2">One Handed Melee: 2</li>
+						<li class="roller" quality="athleticism" value="0">Two Handed Melee: 0</li>
+						<li class="roller" quality="athleticism" value="0">Unarmed Melee: 0</li>
+						<li class="roller" quality="athleticism" value="0">Grapple: 0</li>
+					</ul>
+					</li>
+          <li id="operate_vehicles" value="0"><strong>Operate Vehicles</strong>: 0
+					<ul>
+						<li class="roller" quality="athleticism" value="0">Ground Vehicles: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Aircraft: 0</li>
+						<li class="roller" quality="athleticism" value="0">Watercraft: 0</li>
+						<li class="roller" quality="athleticism" value="0">Power Suits: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Industrial Vehicles: 0</li>
+					</ul>
+					</li>
+          <li id="core_fitness" value="0"><strong>Core Fitness</strong>: 0
+					<ul>
+						<li class="roller" quality="fitness" value="0">Running: 0</li>
+						<li class="roller" quality="fitness" value="0">Swimming: 0</li>
+						<li class="roller" quality="athleticism" value="0">Climbing: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Throwing: 0</li>
+						<li class="roller" quality="athleticism" value="0">Tumble: 0</li>
+					</ul>
+					</li>
+          <li id="espionage" value="0"><strong>Espionage</strong>: 0
+					<ul>
+						<li class="roller" quality="physical_acumen" value="0">Theft: 0</li>
+						<li class="roller" quality="athleticism" value="1">Stealth: 1</li>
+						<li class="roller" quality="athleticism" value="0">Escape Artist: 0</li>
+						<li class="roller" quality="presence" value="0">Deceive: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Defeat Security: 0</li>
+					</ul>
+					</li>
+          <li id="assault_support_weapons" value="0"><strong>Assault Support Weapons</strong>: 0
+					<ul>
+						<li class="roller" quality="athleticism" value="0">Heavy Assault Weapons: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Launchers and Mortars: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Explosives: 0</li>
+					</ul>
+					</li>
+          <li id="small_arms" value="0"><strong>Small Arms</strong>: 0
+					<ul>
+						<li class="roller" quality="physical_acumen" value="0">Pistols and SMGs: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Rifles and Shotguns: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Bows and Crossbows: 0</li>
+					</ul>
+					</li>
+          <li id="vehicle_systems" value="0"><strong>Vehicle Systems</strong>: 0
+					<ul>
+						<li class="roller" quality="physical_acumen" value="0">Navigation Systems: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Weapon Systems: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Sensory and Comms: 0</li>
+						<li class="roller" quality="physical_acumen" value="0">Equipment Systems: 0</li>
+					</ul>
+					</li>
+				</ul>
+			</div>
+
+      <div id="roll_history">
+        <p><strong>Roll History</strong></p>
+        <div id="rolls">
+          <!-- container for roll results -->
+        </div>
+      </div>
+		</div>
+    <div id="quick_menu" onmouseover="clearMenu()" onmouseout="unpopMenu()">
+      <ul>
+        <li value="6" onclick="timeOut(); rollThis(6);">roll 6</li>
+        <li value="5" onclick="timeOut(); rollThis(5);">roll 5</li>
+        <li value="4" onclick="timeOut(); rollThis(4);">roll 4</li>
+        <li value="3" onclick="timeOut(); rollThis(3);">roll 3</li>
+        <li value="2" onclick="timeOut(); rollThis(2);">roll 2</li>
+        <li value="1" onclick="timeOut(); rollThis(1);">roll 1</li>
+      </ul>
+    </div>
+    <div id="main_menu">
+      <ul>
+        <li class="abilities">Abilities</li>
+        <li class="drawbacks">Drawbacks</li>
+        <li class="deviations">Deviations</li>
+        <li class="ascension">Ascension</li>
+        <li class="equipment">Equipment</li>
+        <li class="wielding" onclick="wieldpop();">Wielding</li>
+      </ul>
+    </div>
+    <div id="abilities">
+    </div>
+    <div id="drawbacks">
+    </div>
+    <div id="deviations">
+    </div>
+    <div id="ascension">
+    </div>
+    <div id="equipment">
+    </div>
+    <div id="wielding">
+      <ul id="sources">
+      <script type="text/javascript">
+        document.write('<li class="source" id="elemental" value="'+w.source.elemental+'" onclick="wield.source = \'Elemental\'; wield.sourceVal = this.value; w_populate();">Elemental: '+w.source.elemental+'</li>');
+        document.write('<li class="source" id="energy" value="'+w.source.energy+'" onclick="wield.source = \'Energy\'; wield.sourceVal = this.value; w_populate();">Energy: '+w.source.energy+'</li>');
+        document.write('<li class="source" id="being" value="'+w.source.being+'" onclick="wield.source = \'Being\'; wield.sourceVal = this.value; w_populate();">Being: '+w.source.being+'</li>');
+        document.write('<li class="source" id="void" value="'+w.source.void+'" onclick="wield.source = \'Void\'; wield.sourceVal = this.value; w_populate();">Void: '+w.source.void+'</li>');
+        document.write('<li class="source" id="alpha" value="'+w.source.alpha+'" onclick="wield.source = \'Alpha\'; wield.sourceVal = this.value; w_populate();">Alpha: '+w.source.alpha+'</li>');
+      </script>
+          <!--<li id="omega" value="0">Omega: 0</li>-->
+      </ul>
+      <ul id="intentions">
+        <li>Bane
+        <ul id="bane">
+          <li class="intention" id="agony" value="6" onclick="wield.intent = 'Agony'; wield.intentVal = this.value; w_populate();">Agony: 6</li>
+          <li class="intention" id="damnation" value="0" onclick="wield.intent = 'Damnation'; wield.intentVal = this.value; w_populate();">Damnation: 0</li>
+          <li class="intention" id="nihilism" value="6" onclick="wield.intent = 'Nihilism'; wield.intentVal = this.value; w_populate();">Nihilism: 6</li>
+          <li class="intention" id="malice" value="0" onclick="wield.intent = 'Malice'; wield.intentVal = this.value; w_populate();">Malice: 0</li>
+        </ul>
+        </li>
+        <li>Chaos
+        <ul id="chaos">
+          <li class="intention" id="entropy" value="0" onclick="wield.intent = 'Entropy'; wield.intentVal = this.value; w_populate();">Entropy: 0</li>
+          <li class="intention" id="insanity" value="0" onclick="wield.intent = 'Insanity'; wield.intentVal = this.value; w_populate();">Insanity: 0</li>
+          <li class="intention" id="ignorance" value="0" onclick="wield.intent = 'Ignorance'; wield.intentVal = this.value; w_populate();">Ignorance: 0</li>
+          <li class="intention" id="anarchy" value="0" onclick="wield.intent = 'Anarchy'; wield.intentVal = this.value; w_populate();">Anarchy: 0</li>
+        </ul>
+        </li>
+        <li>Sancto
+        <ul id="sancto">
+          <li class="intention" id="deliverance" value="0" onclick="wield.intent = 'Deliverance'; wield.intentVal = this.value; w_populate();">Deliverance: 0</li>
+          <li class="intention" id="salvation" value="1" onclick="wield.intent = 'Salvation'; wield.intentVal = this.value; w_populate();">Salvation: 1</li>
+          <li class="intention" id="creation" value="1" onclick="wield.intent = 'Creation'; wield.intentVal = this.value; w_populate();">Creation: 1</li>
+          <li class="intention" id="inspiration" value="0" onclick="wield.intent = 'Inspiration'; wield.intentVal = this.value; w_populate();">Inspiration: 0</li>
+        </ul>
+        </li>
+        <li>Order
+        <ul id="order">
+          <li class="intention" id="constancy" value="0" onclick="wield.intent = 'Constancy'; wield.intentVal = this.value; w_populate();">Constancy: 0</li>
+          <li class="intention" id="clarity" value="0" onclick="wield.intent = 'Clarity'; wield.intentVal = this.value; w_populate();">Clarity: 0</li>
+          <li class="intention" id="insight" value="0" onclick="wield.intent = 'Insight'; wield.intentVal = this.value; w_populate();">Insight: 0</li>
+          <li class="intention" id="control" value="2" onclick="wield.intent = 'Control'; wield.intentVal = this.value; w_populate();">Control: 2</li>
+        </ul>
+        </li>
+      </ul>
+      <div class="rightCol">
+        <p><strong><u>Wield Calculator</u></strong></p>
+        <p>
+					Source: <span id="source_container"><!-- source --></span>
+        </p>
+        <p>
+					Intention: <span id="intention_container"><!-- intention --></span>
+        </p>
+				<br />
+        <table>
+					<tr>
+						<td>&nbsp;</td>
+						<td>range:</td>
+						<td><img src="images/arrow_l.gif" onclick="wield.decRange(); $('#range_container').html(wield.updateValues());" /></td>
+						<td style="text-align: center;"><strong><span id="range_container">null</span></strong></td>
+						<td><img src="images/arrow_r.gif" onclick="wield.incRange(); $('#range_container').html(wield.updateValues());" /></td>
+					</tr>
+          <tr>
+						<td>&nbsp;</td>
+            <td style="width: 12em;">not/aoe:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decNot(); $('#not_container').html(wield.updateValues());" /></td>
+            <td style="width: 8em; text-align: center;"><strong><span id="not_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incNot(); $('#not_container').html(wield.updateValues());" /></td>
+          </tr>
+          <tr>
+            <td><img src="images/grey_cross.gif" onclick="wield.switchPot();" /></td>
+            <td><span id="potent_switch">damage/healing</span>:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decPot(); $('#potent_container').html(wield.updateValues());" /></td>
+            <td style="text-align: center; text-align: center;"><strong><span id="potent_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incPot(); $('#potent_container').html(wield.updateValues());" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>wt(lbs):</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decWeight(); $('#weight_container').html(wield.updateValuesght());" /></td>
+            <td style="text-align: center;"><strong><span id="weight_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incWeight(); $('#weight_container').html(wield.updateValuesght());" /></td>
+          </tr>
+          <tr>
+            <td><img src="images/grey_cross.gif" onclick="wield.switchDur();" /></td>
+            <td><span id="dur_switch">duration (combat)</span>:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decDur(); $('#duration_container').html(wield.updateValues());" /></td>
+            <td style="text-align: center;"><strong><span id="duration_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incDur(); $('#duration_container').html(wield.updateValues());" /></td>
+          </tr>
+          <tr>
+            <td><img src="images/grey_cross.gif" onclick="wield.switchMod();" /></td>
+            <td><span id="mod_switch">modifier (minor)</span>:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decMod(); $('#mod_container').html(wield.updateValues());" /></td>
+            <td style="text-align: center;"><strong><span id="mod_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incMod(); $('#mod_container').html(wield.updateValues());" /></td>
+          </tr>
+          <tr>
+						<td>&nbsp;</td>
+            <td>time on target:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decTot(); $('#tot_container').html(wield.updateValues());" /></td>
+            <td style="text-align: center;"><strong><span id="tot_container">Base</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incTot(); $('#tot_container').html(wield.updateValues());" /></td>
+          </tr>
+				</table>
+				<br />
+				<br />
+        <p>
+				<strong>Wield Time:</strong> <strong><span id="wt_container">0</span></strong>
+        </p>
+        <p>
+				<strong>Endurance:</strong> <strong><span id="end_container">0</span></strong>
+        </p>
+        <p>
+				<strong>DR:</strong> <strong><span id="dr_container">0</span></strong>
+        </p>
+      </div>
+    </div>
+    <div class="footer_pad">&nbsp;</div>
+	</body>
+</html>

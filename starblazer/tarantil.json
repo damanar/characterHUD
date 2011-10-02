@@ -1,0 +1,92 @@
+{ "character": {
+  "name": "Tarantil",
+  "legend": "Tarantil and the Droid Army",
+  "aspects": [
+    "Friendly Engineer and Medic",
+    "Gullible",
+    "Ashamed of Warlord childhood",
+    "B2-HA - Battle Droid",
+    "Juryrigger Extroardinaire",
+    { "future_aspect":
+      {
+        "phase":
+        [
+          {
+            "name": "Acquire innovative power source",
+            "completed": "false"
+          },
+          {
+            "name": "Design and gatheer unique parts",
+            "completed": "false"
+          },
+          {
+            "name": "Build the starship",
+            "completed": "false"
+          }
+        ]},
+        "name": "Advanced Starship Engineer"
+    },
+    "Cybernetic Eye"
+    ],
+    "skills": [
+      { "name": "Engineering",
+        "rank": "4" },
+      { "name": "Science",
+        "rank": "3" },
+      { "name": "Starship Systems",
+        "rank": "3" },
+      { "name": "Guns",
+        "rank": "2" },
+      { "name": "Resources",
+        "rank": "2" },
+      { "name": "Alertness",
+        "rank": "2" },
+      { "name": "Discipline",
+        "rank": "1" },
+      { "name": "Investigation",
+        "rank": "1" },
+      { "name": "Endurance",
+        "rank": "1" },
+      { "name": "Academics",
+        "rank": "1" },
+      { "name": "Athletics",
+        "rank": "1" }
+    ],
+    "stunts": [
+      { "name": "Mister Fix-it",
+        "skill": "Engineering",
+        "effect": "Reduces Repair times by 2 steps"
+      },
+      { "name": "Companion",
+        "skill": "Engineering",
+        "effect": "B2-HA Battle Droid"
+      },
+      { "name": "Grease Monkey",
+        "skill": "Engineering",
+        "effect": "Reduces time and difficulty by one step"
+      },
+      { "name": "Doctor",
+        "skill": "Science",
+        "effect": "+2 to medic rolls"
+      },
+      { "name": "Mandroid Eye",
+        "skill": "N/A",
+        "effect": "grants +1 alertness, and Enhanced Vision - Infrared"
+      }
+    ],
+    "stuff": [
+      { "name": "auto rifle",
+        "type": "weapon",
+        "damage": "+3",
+        "range": "3 zones"
+      },
+      { "name": "Medic Kit",
+        "type": "device",
+        "bonus": "+1 to medical aid"
+      },
+      { "name": "Engineering Device",
+        "type": "device",
+        "bonus": "+1 to engineering"
+      }
+    ]
+}}

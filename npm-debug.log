@@ -1,0 +1,43 @@
+info it worked if it ends with ok
+verbose cli [ 'node',
+verbose cli   '/usr/local/bin/npm',
+verbose cli   '-g',
+verbose cli   'install',
+verbose cli   'socket.io' ]
+info using npm@1.0.28-pre-DEV-UNSTABLE
+info using node@v0.5.6
+verbose config file /home/damanar/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose into /usr/local/lib [ 'socket.io' ]
+verbose cache add socket.io
+verbose cache add [ 'socket.io', null ]
+silly cache add: name, spec, args [ undefined, 'socket.io', [ 'socket.io', null ] ]
+verbose parsed url { pathname: 'socket.io', href: 'socket.io' }
+info addNamed [ 'socket.io', '' ]
+verbose addNamed [ null, '' ]
+verbose GET socket.io
+verbose raw, before any munging socket.io
+verbose url resolving [ 'https://registry.npmjs.org/', './socket.io' ]
+verbose url resolved https://registry.npmjs.org/socket.io
+ERR! Error: SSL Error: SELF_SIGNED_CERT_IN_CHAIN
+ERR!     at ClientRequest.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/main.js:236:28)
+ERR!     at ClientRequest.emit (events.js:67:17)
+ERR!     at HTTPParser.onIncoming (http2.js:1202:11)
+ERR!     at HTTPParser.onHeadersComplete (http2.js:108:31)
+ERR!     at CleartextStream.ondata (http2.js:1099:24)
+ERR!     at CleartextStream._push (tls.js:343:27)
+ERR!     at SecurePair.cycle (tls.js:632:20)
+ERR!     at EncryptedStream.write (tls.js:121:13)
+ERR!     at Socket.ondata (stream.js:36:26)
+ERR!     at Socket.emit (events.js:67:17)
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Linux 2.6.32-33-generic
+ERR! command "node" "/usr/local/bin/npm" "-g" "install" "socket.io"
+ERR! cwd /var/www/characterhud
+ERR! node -v v0.5.6
+ERR! npm -v 1.0.28-pre-DEV-UNSTABLE
+verbose exit [ 1, true ]

@@ -1,0 +1,46 @@
+body {
+  width: 100%;
+  padding: 1em;
+  font-size: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+}
+
+.ind {
+  padding-left: 20px;
+}
+
+.completed {
+  font-weight: 700;
+}
+
+.skills ul.hidden {
+  display: none;
+}
+
+.skills ul {
+  display: block;
+  clear: left;
+}
+
+.skills ul li {
+  display: inline;
+  float: left;
+  padding-right: 10px;
+  border-left: 1px solid black;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.skills ul li:first-child {
+  border-left: 0;
+  padding-left: 0px;
+}

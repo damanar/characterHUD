@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Welcome to Character HUD - the Modular RPG Character Heads Up Display</title>
+		<script type="text/javascript" src="js/jquery.js">/* for ie*/</script>
+		<script type="text/javascript" src="js/jquery.hoverIntent.js">/* for ie*/</script>
+		<link type="text/css" rel="stylesheet" href="css/_styles.css" />
+<!--script type="text/javascript">
+		 function getData() {
+				var server_request = "char_data/malcolm_taylor.php?userId=bcard&callback=showData";
+
+				//Check for the existing script node
+				var oScript = document.getElementById("dynamic_script_injection_node");	
+
+				// Get the script tag, if it exists
+				var head = document.getElementsByTagName("head").item(0);
+				// Remove the tag, if it exists to avoid the increase in size
+				if (oScript) {
+					head.removeChild(oScript);
+				}
+
+				script = document.createElement("script");
+				script.setAttribute("id", "dynamic_script_injection_node");
+				script.setAttribute("type", "text/javascript");
+				script.setAttribute("src", server_request);
+				// all set, add the script
+				head.appendChild(script);
+			}
+
+</script-->
+		<script type="text/javascript" src="js/_script.js">/* for ie*/</script>
+		<script type="text/javascript" src="js/functions_ao.js">/* for ie*/</script>
+	</head>
+	<body>
+    <div id="wielding">
+			<script type="text/javascript">
+				var wield = new Wield;
+			</script>
+        <p><strong><u>Wield Calculator</u></strong></p>
+				<br />
+        <table>
+					<tr>
+						<td>&nbsp;</td>
+						<td>range:</td>
+						<td><img src="images/arrow_l.gif" onclick="wield.decRange(); $('#range_container').html(wield.updateValues());" /></td>
+						<td style="text-align: center;"><strong><span id="range_container">null</span></strong></td>
+						<td><img src="images/arrow_r.gif" onclick="wield.incRange(); $('#range_container').html(wield.updateValues());" /></td>
+					</tr>
+          <tr>
+						<td>&nbsp;</td>
+            <td style="width: 12em;">not/aoe:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decNot(); $('#not_container').html(wield.updateValues());" /></td>
+            <td style="width: 8em; text-align: center;"><strong><span id="not_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incNot(); $('#not_container').html(wield.updateValues());" /></td>
+          </tr>
+          <tr>
+            <td><img src="images/grey_cross.gif" onclick="wield.switchPot(); wield.updateValues();" /></td>
+            <td><span id="potent_switch">damage/healing</span>:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decPot(); $('#potent_container').html(wield.updateValues());" /></td>
+            <td style="text-align: center; text-align: center;"><strong><span id="potent_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incPot(); $('#potent_container').html(wield.updateValues());" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>wt(lbs):</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decWeight(); $('#weight_container').html(wield.updateValues());" /></td>
+            <td style="text-align: center;"><strong><span id="weight_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incWeight(); $('#weight_container').html(wield.updateValues());" /></td>
+          </tr>
+          <tr>
+            <td><img src="images/grey_cross.gif" onclick="wield.switchDur(); wield.updateValues();" /></td>
+            <td><span id="dur_switch">duration (combat)</span>:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decDur(); $('#duration_container').html(wield.updateValues());" /></td>
+            <td style="text-align: center;"><strong><span id="duration_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incDur(); $('#duration_container').html(wield.updateValues());" /></td>
+          </tr>
+          <tr>
+            <td><img src="images/grey_cross.gif" onclick="wield.switchMod(); wield.updateValues();" /></td>
+            <td><span id="mod_switch">modifier (minor)</span>:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decMod(); $('#mod_container').html(wield.updateValues());" /></td>
+            <td style="text-align: center;"><strong><span id="mod_container">null</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incMod(); $('#mod_container').html(wield.updateValues());" /></td>
+          </tr>
+          <tr>
+						<td>&nbsp;</td>
+            <td>time on target:</td>
+            <td><img src="images/arrow_l.gif" onclick="wield.decTot(); $('#tot_container').html(wield.updateValues());" /></td>
+            <td style="text-align: center;"><strong><span id="tot_container">Base</span></strong></td>
+            <td><img src="images/arrow_r.gif" onclick="wield.incTot(); $('#tot_container').html(wield.updateValues());" /></td>
+          </tr>
+				</table>
+				<br />
+				<br />
+        <p>
+				<strong>Wield Time:</strong> <strong><span id="wt_container">1</span></strong>
+        </p>
+        <p>
+				<strong>Endurance:</strong> <strong><span id="end_container">1</span></strong>
+        </p>
+        <p>
+				<strong>DR:</strong> <strong><span id="dr_container">0</span></strong>
+        </p>
+    </div>
+    <div class="footer_pad">&nbsp;</div>
+	</body>
+</html>
